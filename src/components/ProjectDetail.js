@@ -2,7 +2,7 @@ import { marked } from 'marked';
 
 export async function ProjectDetail(slug) {
   try {
-    const response = await fetch(`/projects/${slug}.md`);
+    const response = await fetch(`projects/${slug}.md`);
     if (!response.ok) throw new Error('Project not found');
     const text = await response.text();
     const html = marked.parse(text);

@@ -88,7 +88,7 @@
             </div>
         </div>
     </section>
-  `}async function pe(){try{const n=await(await fetch("/projects/index.json")).json(),e=["Todos",...new Set(n.flatMap(r=>r.tags))],t=document.createElement("div"),s=r=>(r==="Todos"?n:n.filter(d=>d.tags.includes(r))).map(d=>{const c=n.findIndex(x=>x.slug===d.slug),u=d.image.includes("placehold.co"),h=d.title,k=`bg-project-${c%6+1}`;return`
+  `}async function pe(){try{const n=await(await fetch("projects/index.json")).json(),e=["Todos",...new Set(n.flatMap(r=>r.tags))],t=document.createElement("div"),s=r=>(r==="Todos"?n:n.filter(d=>d.tags.includes(r))).map(d=>{const c=n.findIndex(x=>x.slug===d.slug),u=d.image.includes("placehold.co"),h=d.title,k=`bg-project-${c%6+1}`;return`
         <div class="project-card max-w-sm bg-white border border-gray-100 rounded-2xl shadow-lg dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-tags='${JSON.stringify(d.tags)}'>
             <div class="h-48 ${k} relative overflow-hidden flex items-center justify-center p-4 text-center">
                 <!-- Overlay sutil -->

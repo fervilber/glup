@@ -2,7 +2,7 @@ import { marked } from 'marked';
 
 export async function MarkdownPage(pageName) {
     try {
-        const response = await fetch(`/pages/${pageName}.md`);
+        const response = await fetch(`pages/${pageName}.md`);
         if (!response.ok) throw new Error('Page not found');
         const text = await response.text();
         const html = marked.parse(text);

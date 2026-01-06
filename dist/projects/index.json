@@ -1,13 +1,13 @@
 [
     {
         "slug": "enrdados",
-        "title": "Blog de programación con R",
+        "title": "EnRdados Blog",
         "description": "un blog donde hablamos de R, tecnología y mucho más.",
         "tags": [
             "Blog",
             "Programación"
         ],
-        "image": "/projects/erdadoswed.png",
+        "image": "projects/erdadoswed.png",
         "image_old_reference": "https://placehold.co/600x400/2563eb/white?text=EnRdados"
     },
     {

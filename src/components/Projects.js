@@ -1,6 +1,6 @@
 export async function Projects() {
     try {
-        const response = await fetch('/projects/index.json');
+        const response = await fetch('projects/index.json');
         const projects = await response.json();
 
         // Extract unique tags

@@ -1,4 +1,8 @@
-# EnRdados
+# EnRdados Blog
+
+Este proyecto nació en el 2017, cuando empecé a tomarme en serio la programamción con R. Me apunté al congreso que hubo en Murcia y la verdad que lo pasé tan bien, conocí a tanta gente involucrada de buena fe en este lenguaje tan maravilloso que me puse las pilas para aprender más R y compartir los conocimientos, así nació el Blog
+
+![pantalla de EnRdados Blog](/projects/erdadoswed.png)
 
 Este es un ejemplo de cómo se verá la página de detalle de un proyecto.
 
@@ -16,6 +20,6 @@ El proyecto utiliza las siguientes tecnologías:
 2. Tailwind CSS
 3. Marked.js
 
-![Placeholder](https://placehold.co/800x400?text=Captura+de+Pantalla)
+![pantalla de EnRdados Blog](/projects/erdadoswed.png)
 
 Puedes ver el código en [GitHub](#).
