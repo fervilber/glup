@@ -1,0 +1,64 @@
+[
+    {
+        "slug": "enrdados",
+        "title": "Blog de programación con R",
+        "description": "un blog donde hablamos de R, tecnología y mucho más.",
+        "tags": [
+            "Blog",
+            "Programación"
+        ],
+        "image": "/projects/erdadoswed.png",
+        "image_old_reference": "https://placehold.co/600x400/2563eb/white?text=EnRdados"
+    },
+    {
+        "slug": "FinFer",
+        "title": "Finanzas Fer-sonales",
+        "description": "Controla todas tus cuentas e inversiones desde una misma app y gestiona de verdad tu patrimonio.",
+        "tags": [
+            "Finanzas",
+            "Bolsa",
+            "app"
+        ],
+        "image": "https://placehold.co/600x400/3b82f6/white?text=FinFer-app"
+    },
+    {
+        "slug": "Corcho",
+        "title": "Corcho",
+        "description": "Gestor de tareas minimalista con Drag & Drop.",
+        "tags": [
+            "app",
+            "gestión"
+        ],
+        "image": "https://placehold.co/600x400/10b981/white?text=Corcho-app"
+    },
+    {
+        "slug": "AsoGest",
+        "title": "AsoGest-app",
+        "description": "Consulta el clima mundial en tiempo real consumiendo APIs.",
+        "tags": [
+            "app",
+            "Finanzas"
+        ],
+        "image": "https://placehold.co/600x400/f59e0b/white?text=AsociGest-app"
+    },
+    {
+        "slug": "SaltaCacas",
+        "title": "SaltaCacas",
+        "description": "Mi primer juego web.",
+        "tags": [
+            "Juego",
+            "app"
+        ],
+        "image": "https://placehold.co/600x400/6366f1/white?text=SaltaCacas"
+    },
+    {
+        "slug": "libros-pasatiempos",
+        "title": "Libros Pasatiempos",
+        "description": "Colección de juegos mentales y pasatiempos en formato digital.",
+        "tags": [
+            "Entretenimiento",
+            "app"
+        ],
+        "image": "https://placehold.co/600x400/8b5cf6/white?text=Libros+Pasatiempos"
+    }
+]
