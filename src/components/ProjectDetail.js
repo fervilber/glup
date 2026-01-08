@@ -5,7 +5,45 @@ export async function ProjectDetail(slug) {
     const response = await fetch(`projects/${slug}.md`);
     if (!response.ok) throw new Error('Project not found');
     const text = await response.text();
-    const html = marked.parse(text);
+
+    // Fetch all projects to handle navigation
+    const projectsResponse = await fetch('projects/index.json');
+    const projects = await projectsResponse.json();
+    const currentIndex = projects.findIndex(p => p.slug === slug);
+    const prevProject = projects[currentIndex - 1];
+    const nextProject = projects[currentIndex + 1];
+
+    // Custom renderer to open links in new tab
+    const renderer = new marked.Renderer();
+    renderer.link = (href, title, text) => {
+      const isExternal = href.startsWith('http');
+      return `<a href="${href}" ${isExternal ? 'target="_blank" rel="noopener noreferrer"' : ''} title="${title || ''}">${text}</a>`;
+    };
+
+    const html = marked.parse(text, { renderer });
+
+    const navButtons = `
+      <div class="flex items-center space-x-2">
+        ${prevProject ? `
+          <a href="#/project/${prevProject.slug}" class="p-2 text-gray-500 hover:text-brand-600 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-all" title="Anterior: ${prevProject.title}">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </a>
+        ` : `
+          <div class="p-2 text-gray-300 dark:text-gray-600 cursor-not-allowed">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </div>
+        `}
+        ${nextProject ? `
+          <a href="#/project/${nextProject.slug}" class="p-2 text-gray-500 hover:text-brand-600 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-all" title="Siguiente: ${nextProject.title}">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        ` : `
+          <div class="p-2 text-gray-300 dark:text-gray-600 cursor-not-allowed">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </div>
+        `}
+      </div>
+    `;
 
     return `
       <section class="bg-white dark:bg-gray-900 mt-20 min-h-screen relative overflow-hidden">
@@ -14,9 +52,12 @@ export async function ProjectDetail(slug) {
         
         <div class="mt-12 max-w-screen-lg mx-auto p-8 relative z-10">
           <div class="p-8 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700">
-            <a href="#/projects" class="inline-flex items-center mb-6 text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white transition-colors">
-               ← Volver a proyectos
-            </a>
+            <div class="flex items-center justify-between mb-6">
+              <a href="#/projects" class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white transition-colors">
+                ← Volver a proyectos
+              </a>
+              ${navButtons}
+            </div>
             <article class="prose prose-lg dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-white prose-a:text-brand-600 mx-auto">
                 ${html}
             </article>

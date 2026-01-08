@@ -3,7 +3,7 @@ export function Navbar() {
     <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md dark:border-gray-700 transition-colors duration-300">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <span class="self-center text-2xl font-bold whitespace-nowrap text-brand-title">F. VilBer Proyectos</span>
+            <span class="self-center text-2xl font-bold whitespace-nowrap text-brand-title">Proyectos de VilBer</span>
         </a>
         
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -30,16 +30,16 @@ export function Navbar() {
         <div class="hidden w-full md:block md:w-auto" id="navbar-sticky">
           <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
             <li>
-              <a href="#/" class="nav-link block py-2 px-3 text-white bg-brand-700 rounded md:bg-transparent md:text-brand-700 md:p-0 dark:text-white md:dark:text-brand-500" aria-current="page">Inicio</a>
+              <a href="#/" class="nav-link block py-2 px-3 text-white bg-brand-700 font-bold rounded md:bg-transparent md:text-brand-700 md:p-0 dark:text-white md:dark:text-brand-500" aria-current="page">Inicio</a>
             </li>
             <li>
-              <a href="#/projects" class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand-700 md:p-0 dark:text-white md:dark:hover:text-brand-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Proyectos</a>
+              <a href="#/projects" class="nav-link block py-2 px-3 text-gray-900 font-bold rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand-700 md:p-0 dark:text-white md:dark:hover:text-brand-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Proyectos</a>
             </li>
             <li>
-              <a href="#/about" class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand-700 md:p-0 dark:text-white md:dark:hover:text-brand-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sobre mí</a>
+              <a href="#/about" class="nav-link block py-2 px-3 text-gray-900 font-bold rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand-700 md:p-0 dark:text-white md:dark:hover:text-brand-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sobre mí</a>
             </li>
             <li>
-              <a href="#/contact" class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand-700 md:p-0 dark:text-white md:dark:hover:text-brand-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contacto</a>
+              <a href="#/contact" class="nav-link block py-2 px-3 text-gray-900 font-bold rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand-700 md:p-0 dark:text-white md:dark:hover:text-brand-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contacto</a>
             </li>
           </ul>
         </div>

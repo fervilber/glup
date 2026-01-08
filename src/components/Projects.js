@@ -24,18 +24,20 @@ export async function Projects() {
 
                 return `
         <div class="project-card max-w-sm bg-white border border-gray-100 rounded-2xl shadow-lg dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-tags='${JSON.stringify(project.tags)}'>
-            <div class="h-48 ${cardColorClass} relative overflow-hidden flex items-center justify-center p-4 text-center">
-                <!-- Overlay sutil -->
-                <div class="absolute inset-0 bg-black/10 opacity-0 hover:opacity-100 transition-opacity"></div>
-                
-                ${!isPlaceholder ? `
-                    <img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50" src="${project.image}" alt="${project.title}" />
-                ` : ''}
-                
-                <span class="relative z-10 text-white font-black text-2xl uppercase tracking-tighter leading-none drop-shadow-md">
-                    ${cardTitle}
-                </span>
-            </div>
+            <a href="#/project/${project.slug}" class="block group">
+                <div class="h-48 ${cardColorClass} relative overflow-hidden flex items-center justify-center p-4 text-center">
+                    <!-- Overlay sutil -->
+                    <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    ${!isPlaceholder ? `
+                        <img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50 transition-transform duration-500 group-hover:scale-110" src="${project.image}" alt="${project.title}" />
+                    ` : ''}
+                    
+                    <span class="relative z-10 text-white font-black text-2xl uppercase tracking-tighter leading-none drop-shadow-md transition-transform duration-300 group-hover:scale-105">
+                        ${cardTitle}
+                    </span>
+                </div>
+            </a>
             <div class="p-6">
                 <a href="#/project/${project.slug}">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-brand-600 transition-colors">${project.title}</h5>
@@ -90,9 +92,13 @@ export async function Projects() {
         // Let's modify main.js to handle post-render Logic? No, let's use a self-contained init pattern if possible.
         // Actually, simpler: return string, and use a unique ID to attach listener in a setTimeout.
 
+        // Aumentamos el tiempo de espera para asegurar que el HTML se ha inyectado 
+        // en el DOM principal antes de buscar los botones.
         setTimeout(() => {
             const filters = document.querySelectorAll('.filter-btn');
             const grid = document.getElementById('projects-grid');
+
+            if (!grid || filters.length === 0) return;
 
             filters.forEach(btn => {
                 btn.addEventListener('click', (e) => {
@@ -111,7 +117,7 @@ export async function Projects() {
                     }, 200);
                 });
             });
-        }, 0);
+        }, 300);
 
         return container.innerHTML;
 

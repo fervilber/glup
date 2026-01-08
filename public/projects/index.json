@@ -7,7 +7,7 @@
             "Blog",
             "Programación"
         ],
-        "image": "projects/erdadoswed.png",
+        "image": "img/erdadoswed.png",
         "image_old_reference": "https://placehold.co/600x400/2563eb/white?text=EnRdados"
     },
     {
@@ -19,7 +19,7 @@
             "Bolsa",
             "app"
         ],
-        "image": "https://placehold.co/600x400/3b82f6/white?text=FinFer-app"
+        "image": "img/finfer_analisis3.png"
     },
     {
         "slug": "Corcho",

@@ -5,7 +5,15 @@ export async function MarkdownPage(pageName) {
         const response = await fetch(`pages/${pageName}.md`);
         if (!response.ok) throw new Error('Page not found');
         const text = await response.text();
-        const html = marked.parse(text);
+
+        // Custom renderer para abrir links externos en nueva pestaña
+        const renderer = new marked.Renderer();
+        renderer.link = (href, title, text) => {
+            const isExternal = href.startsWith('http');
+            return `<a href="${href}" ${isExternal ? 'target="_blank" rel="noopener noreferrer"' : ''} title="${title || ''}">${text}</a>`;
+        };
+
+        const html = marked.parse(text, { renderer });
 
         return `
       <section class="bg-white dark:bg-gray-900 mt-20 min-h-[60vh] relative overflow-hidden">

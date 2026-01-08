@@ -6,9 +6,8 @@ Puedes enviarme un correo electrónico directamente o contactarme a través de m
 
 ## Mis Datos
 
-- **Email**: [email@example.com](mailto:email@example.com)
-- **LinkedIn**: [linkedin.com/in/tu-perfil](#)
-- **GitHub**: [github.com/tu-usuario](#)
+- **Email**: [contactovilber@pm.me](mailto:contactovilber@pm.me)
+- **GitHub**: [https://github.com/fervilber](#)
 
 ---
 

@@ -6,7 +6,7 @@ export function Home() {
 
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 relative z-10">
             <span class="bg-brand-100 text-brand-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-brand-400 mb-8" data-animate="fade-up">
-                <span class="w-2 h-2 me-1 bg-brand-500 rounded-full animate-ping"></span>
+                <span class="w-2.5 h-2.5 me-1 bg-brand-500 rounded-full animate-ping"></span>
                 Bienvenido a mi web de proyectos personales, Empezamos!!!
             </span>
             
@@ -15,8 +15,7 @@ export function Home() {
             </h1>
             
             <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400 max-w-3xl mx-auto" data-animate="fade-up" data-delay="200">
-                Este es el punto de encuentro de mis ideas y proyectos, el enlace a cada uno de ellos. No espero nada de ti, solo comparto lo que hice por si es de utilidad. Si te gusta, si es útil alguno de ellos y quieres apoyarme, puedes hacerlo a través de las redes sociales.
-            </p>
+                Este es el punto de encuentro de mis ideas y proyectos más personales. Nada de trabajo, solo cosas que hice por pura y sana diversión, a veces sólo y otras con mis chic@s y que recopilo aquí juntas por si encuentras alguna utilidad o te interesa.            </p>
             
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4" data-animate="fade-up" data-delay="300">
                 <a href="#/projects" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-brand-700 hover:bg-brand-800 focus:ring-4 focus:ring-brand-300 dark:focus:ring-brand-900 transition-transform hover:scale-105">

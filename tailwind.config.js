@@ -12,23 +12,27 @@ export default {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                display: ['Outfit', 'sans-serif'],
+            },
             colors: {
                 // CENTRALIZACIÓN DE COLORES:
                 // Cambia estos valores para cambiar el color global de la web.
                 // Actualmente configurado en ROJO (antes azul).
                 // PALETA TIPO OBSIDIAN / DARK MODERN
                 brand: {
-                    50: '#f8fafc',
-                    100: '#f1f5f9',
-                    200: '#e2e8f0',
-                    300: '#cbd5e1',
-                    400: '#94a3b8',
-                    500: '#64748b',
-                    600: '#475569',
-                    700: '#334155', // Slate oscurecido para botones
-                    800: '#1e293b',
-                    900: '#0f172a',
-                    title: '#ad0646ff', // Blanco roto para cabecera en dark
+                    50: '#fff1f2',
+                    100: '#ffe4e6',
+                    200: '#fecdd3',
+                    300: '#fda4af',
+                    400: '#fb7185',
+                    500: '#f43f5e',
+                    600: '#e11d48', // Color principal vibrante
+                    700: '#be123c', // Para botones
+                    800: '#9f1239', // Para hover
+                    900: '#881337',
+                    title: '#e11d48', // Color del encabezado
                 },
                 // COLORES DE ACENTO PROFESIONALES (TIPO OBSIDIAN / NOTION)
                 project: {
