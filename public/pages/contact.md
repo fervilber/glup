@@ -6,8 +6,8 @@ Puedes enviarme un correo electrónico directamente o contactarme a través de m
 
 ## Mis Datos
 
-- **Email**: [contactovilber@pm.me](mailto:contactovilber@pm.me)
-- **GitHub**: [https://github.com/fervilber](#)
+- **Email**: ![icon](img/icons8-gmail-50.png) [contactovilber@pm.me](mailto:contactovilber@pm.me)
+- **GitHub**: ![icon](img/icons8-github-50.png) [https://github.com/fervilber](https://github.com/fervilber)
 
 ---
 

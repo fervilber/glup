@@ -13,11 +13,20 @@ export async function ProjectDetail(slug) {
     const prevProject = projects[currentIndex - 1];
     const nextProject = projects[currentIndex + 1];
 
-    // Custom renderer to open links in new tab
+    // Custom renderer to handle links and icons
     const renderer = new marked.Renderer();
+
     renderer.link = (href, title, text) => {
       const isExternal = href.startsWith('http');
       return `<a href="${href}" ${isExternal ? 'target="_blank" rel="noopener noreferrer"' : ''} title="${title || ''}">${text}</a>`;
+    };
+
+    renderer.image = (href, title, text) => {
+      const isIcon = href.includes('icons8') || (text && text.toLowerCase().includes('icon'));
+      if (isIcon) {
+        return `<img src="${href}" alt="${text || ''}" title="${title || ''}" class="inline-block w-6 h-6 m-0 align-middle" />`;
+      }
+      return `<img src="${href}" alt="${text || ''}" title="${title || ''}" class="rounded-xl shadow-lg my-8" />`;
     };
 
     const html = marked.parse(text, { renderer });

@@ -6,11 +6,20 @@ export async function MarkdownPage(pageName) {
         if (!response.ok) throw new Error('Page not found');
         const text = await response.text();
 
-        // Custom renderer para abrir links externos en nueva pestaña
+        // Custom renderer para manejar links e iconos
         const renderer = new marked.Renderer();
+
         renderer.link = (href, title, text) => {
             const isExternal = href.startsWith('http');
             return `<a href="${href}" ${isExternal ? 'target="_blank" rel="noopener noreferrer"' : ''} title="${title || ''}">${text}</a>`;
+        };
+
+        renderer.image = (href, title, text) => {
+            const isIcon = href.includes('icons8') || (text && text.toLowerCase().includes('icon'));
+            if (isIcon) {
+                return `<img src="${href}" alt="${text || ''}" title="${title || ''}" class="inline-block w-6 h-6 m-0 align-middle" />`;
+            }
+            return `<img src="${href}" alt="${text || ''}" title="${title || ''}" class="rounded-xl shadow-lg my-8 mx-auto block" />`;
         };
 
         const html = marked.parse(text, { renderer });

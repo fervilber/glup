@@ -24,36 +24,37 @@
     {
         "slug": "Corcho",
         "title": "Corcho",
-        "description": "Gestor de tareas minimalista con Drag & Drop.",
+        "description": "Mi corcho digital, un gestor de tareas minimalista.",
         "tags": [
             "app",
             "gestión"
         ],
-        "image": "https://placehold.co/600x400/10b981/white?text=Corcho-app"
+        "image": "img/corcho01.png"
     },
     {
-        "slug": "AsoGest",
-        "title": "AsoGest-app",
-        "description": "Consulta el clima mundial en tiempo real consumiendo APIs.",
+        "slug": "AGest",
+        "title": "AGEST-app",
+        "description": "Una plataforma de gestión integral diseñada para la administración de asociaciones, AMPAs y ONGs.",
         "tags": [
             "app",
-            "Finanzas"
+            "Finanzas",
+            "Asociaciones"
         ],
-        "image": "https://placehold.co/600x400/f59e0b/white?text=AsociGest-app"
+        "image": "img/ASOCIAGEST01.png"
     },
     {
         "slug": "SaltaCacas",
-        "title": "SaltaCacas",
+        "title": "SaltaCacas Game",
         "description": "Mi primer juego web.",
         "tags": [
             "Juego",
             "app"
         ],
-        "image": "https://placehold.co/600x400/6366f1/white?text=SaltaCacas"
+        "image": "https://enrdados.netlify.app/post/2024-05-17-mi-primer-videojuego-en-python/images/portada_saltacacas.png"
     },
     {
         "slug": "libros-pasatiempos",
-        "title": "Libros Pasatiempos",
+        "title": "Sumas Emparejadas - Libros",
         "description": "Colección de juegos mentales y pasatiempos en formato digital.",
         "tags": [
             "Entretenimiento",

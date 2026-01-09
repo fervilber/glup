@@ -26,9 +26,8 @@ Me gustó mucho el post de gráficas con
 * no puedo evitar hacer arte con los números, y este post de [árboles recursivos](https://enrdados.netlify.app/post/2021-09-23-arboles-con-funciones-recursivas/) me inició en el mundo del arte generativo, jaja
 * Hice unos manuales de uso de algunas librerías que me quedaron genial como el de [ggplot](https://enrdados.netlify.app/post/graficas-con-ggplot/) del que estoy muy contento. (y la segunda parte[ggplot II](https://enrdados.netlify.app/post/graficas-con-ggplot-ii/)) o el de la librería geográfica [sf](https://enrdados.netlify.app/post/manual-de-sf-para-sig/)
 * sin duda mis preferidos eran aquellos de pintar con funciones, en lso que creo mundos gráficos con un click como:
-
-* [pintar-un-edificio-con-r](https://enrdados.netlify.app/post/pintar-un-edificio-con-r/)
-* [pintar un bosque con R](https://enrdados.netlify.app/post/hacer-un-bosque-con-r/)
+  * [pintar-un-edificio-con-r](https://enrdados.netlify.app/post/pintar-un-edificio-con-r/)
+  * [pintar un bosque con R](https://enrdados.netlify.app/post/hacer-un-bosque-con-r/)
 * o la estrella de todos el [generador de islas aleatorias](https://enrdados.netlify.app/post/generador-de-islas-aleatorias/) del que acabé haciendo una app con Shiny que puedes visitar aquí
 * o el famoso [test de Rochard](https://enrdados.netlify.app/post/test-de-rorschach/) del que también hay una app [aquí](https://nolugar.shinyapps.io/rorschach/)
 
