@@ -5,7 +5,8 @@
         "description": "un blog donde hablamos de R, tecnología y mucho más.",
         "tags": [
             "Blog",
-            "Programación"
+            "Programación",
+            "2019"
         ],
         "image": "img/erdadoswed.png",
         "image_old_reference": "https://placehold.co/600x400/2563eb/white?text=EnRdados"
@@ -17,7 +18,8 @@
         "tags": [
             "Finanzas",
             "Bolsa",
-            "app"
+            "app",
+            "2025"
         ],
         "image": "img/finfer_analisis3.png"
     },
@@ -27,7 +29,8 @@
         "description": "Mi corcho digital, un gestor de tareas minimalista.",
         "tags": [
             "app",
-            "gestión"
+            "gestión",
+            "2025"
         ],
         "image": "img/corcho01.png"
     },
@@ -38,7 +41,8 @@
         "tags": [
             "app",
             "Finanzas",
-            "Asociaciones"
+            "Asociaciones",
+            "2025"
         ],
         "image": "img/ASOCIAGEST01.png"
     },
@@ -48,18 +52,31 @@
         "description": "Mi primer juego web.",
         "tags": [
             "Juego",
-            "app"
+            "app",
+            "2025"
         ],
         "image": "https://enrdados.netlify.app/post/2024-05-17-mi-primer-videojuego-en-python/images/portada_saltacacas.png"
     },
     {
-        "slug": "libros-pasatiempos",
-        "title": "Sumas Emparejadas - Libros",
-        "description": "Colección de juegos mentales y pasatiempos en formato digital.",
+        "slug": "SumasEmparejadas",
+        "title": "Libros - Pasatiempos",
+        "description": "Colección de libros de pasatiempos que vendemos en Amazon.",
         "tags": [
             "Entretenimiento",
-            "app"
+            "app",
+            "2024"
         ],
-        "image": "https://placehold.co/600x400/8b5cf6/white?text=Libros+Pasatiempos"
+        "image": "img/sumaemparejadas03.png"
+    },
+    {
+        "slug": "MemoriasSoldado",
+        "title": "Memorias de un soldado 1919-24",
+        "description": "Edición y publicación de las memorias de mi abuelo. Un proyecto de recuperación histórica y producción editorial.",
+        "tags": [
+            "Libro",
+            "Historia",
+            "2019"
+        ],
+        "image": "https://placehold.co/600x400/334155/white?text=Memorias+Soldado"
     }
 ]

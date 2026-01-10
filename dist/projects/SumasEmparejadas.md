@@ -6,7 +6,7 @@ Se trata de buscar en un tablero de hexágonos la suma objetivo entre dos cifras
 
 Seguro que te enganchan !!!.
 
-![sumas emparejadas 01](img/suma_emparejadas04.png)
+![sumas emparejadas 01](img/sumaemparejadas04.png)
 
 ## Sobre el Proyecto
 
@@ -39,6 +39,6 @@ Como involucré a mis peques en todo el proceso, estas aprendieron que lo import
 
 Si el libro no lo conoce nadie, nadie lo compra y ese fue el mejor aprendizaje del proyecto.
 
-[![Sumas emparejadas libro 2]((https://amzn.eu/d/6bK0boB))](img/suma_emparejadas03.png)
+[![Sumas emparejadas libro 2](img/sumaemparejadas03.png)](https://amzn.eu/d/6bK0boB)
 
-[![sumas emparejadas libro 3]((https://amzn.eu/d/89Nsquz))](img/suma_emparejadas01.png)
+[![sumas emparejadas libro 3](img/sumaemparejadas01.png)](https://amzn.eu/d/89Nsquz)

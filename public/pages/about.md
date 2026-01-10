@@ -15,17 +15,3 @@ Por eso he querido crear este repositorio de proyectos en donde pondré una brev
 Además ahora con la IA todos tenemos **superpoderes** ![icon](img/icons8-computadora-50-2.png), así que voy a aprovecharlos, espero que os guste alguno.
 
  Me especializo en crear aplicaciones web **modernas, rápidas y accesibles**. Utilizo un enfoque centrado en el usuario, asegurando que cada proyecto no solo se vea bien, sino que sea intuitivo y fácil de usar.
-
-## Habilidades Técnicas
-
-- **Lenguajes**: R, Excel, JavaScript (ES6+), HTML5
-- **Frameworks**: React, Vite, Tailwind CSS
-- **Backend**: Node.js, Express
-- **Herramientas**: Git, GitHub Actions
-
-## Soft Skills
-
-- Resolución de problemas
-- Trabajo en equipo
-- Aprendizaje autodidacta (en estos temas)
-- Comunicación efectiva
