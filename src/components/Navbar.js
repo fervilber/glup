@@ -10,8 +10,9 @@ export function Navbar() {
             <!-- Dark Mode Toggle -->
             <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-2 transition-all duration-300">
                 <!-- Moon icon (shows in Light mode to switch to Dark) -->
-                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.293 13.293A8 8 0 016.707 2.707 8.001 8.001 0 1010.586 17.586 10.586 10.586 0 0017.293 13.293z"></path>
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M9.528 1.718a7 7 0 012.754 2.754 7 7 0 0110 0 9 9 0 00-2.3-2.3 7 7 0 01-10.454 0zM3.375 7.5a.75.75 0 01.566.545 7.5 7.5 0 007.93 7.93.75.75 0 01.545.566A9.75 9.75 0 011.5 9.75a9.75 9.75 0 011.875-2.25z" clip-rule="evenodd" style="display:none"></path> 
+                    <path fill-rule="evenodd" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" clip-rule="evenodd"></path>
                 </svg>
                 <!-- Sun icon (shows in Dark mode to switch to Light) -->
                 <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

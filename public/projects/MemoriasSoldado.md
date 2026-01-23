@@ -1,12 +1,14 @@
 # Memorias de un soldado 1919-24
 
-Este proyecto es uno de los más personales y emotivos en los que he trabajado. Consistió en la edición integral de las memorias de mi abuelo, relatando sus vivencias durante los años 1919 a 1924.
+Este proyecto es uno de los más personales y emotivos en los que he trabajado. Consistió en la edición integral de las memorias de mi abuelo, relatando sus vivencias durante los años 1919 a 1924 que deja su pueblo y se va a la mili, donde cuenta muchas anécdotas, viajes y su vida en Mahón,hasta que le mandan a la guerra del Riff en Marruecos.
 
 [![libro a la venta](img/memoriassoldado.png)](https://amzn.eu/d/djYiQ4B)
 
 ## El Proceso Editorial
 
-El trabajo fue una labor completa de investigación, lectura y edición con gran respeto a la historia familiar, abarcando todas las fases de la producción editorial:
+Fue una labor de trabajo e investigación que duró años, y en la que colaboraron mi hermana que pasó el manuscrito a digital, luego de corrección, y edición, hasta de producción literaria, un campo en el que noteníamos ni idea, y que llevamos con calma.
+
+Los trabajos que hicimos fueron:
 
 * **Redacción y Transcripción:** Organización de los manuscritos y notas originales para darles una estructura narrativa coherente.
 * **Edición y Corrección:** Revisión exhaustiva del texto para asegurar su calidad literaria manteniendo la voz original de mi abuelo.

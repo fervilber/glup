@@ -8,11 +8,11 @@ Ha quedado un programa bastante interesante.
 
 ## Historia
 
-Hace unos meses fui a una reunión del AMPA casi sin querer, al menos no soy de ir a muchas de estas reuniones, pero es por mis hijos, así que hice el esfuerzo de ir y enterarme. Al finalizar acabé saliendo como parte de la Junta Directiva de la AMPA [icon](img/icons8-banco-50.png)
+Hace unos meses fui a una reunión del AMPA casi sin querer, -no soy de ir a muchas de estas reuniones-, pero luego me siento mal de que casi nadie participe en estas cosas. Total que al finalizar acabé saliendo como parte de la Junta Directiva del AMPA 😂.
 
-A los pocos días y viendo que el lío que teníamos con las actas, los documentos etc, se me ocurrió la idea de hacer este programa y ha quedado genial, otra cosa es que se use de verdad, que es algo que no tengo tan claro.
+A los pocos días y viendo que el lío que teníamos con las actas, los documentos, las cuentas, etc, se me ocurrió la idea de hacer este programa. Con la ayuda de google Antigravity y varios días de trabajo he creado una app que me gusta, y creo que puede ser muy útil 🚀.
 
-Se puede usar para cualquier tipo de asociación, club, grupo etc. aunque no directamente, ya que la web se personaliza para cada una y habría que hacer un clon de la web, y de las bases de datos y adaptarlas a cada uno de los usuarios que lo quiera.
+Se puede usar para cualquier tipo de asociación, club, grupo etc. aunque no directamente, ya que la web se personaliza para cada una y habría que hacer un clon y adaptarla.
 El coste de esto es mínimo, aunque es verdad que si los datos son muchos habría que pagar alguna suscripción de supabase para que no fuera responsabilidad de una cuenta personal unicamente.
 
 ## Enlaces

@@ -78,5 +78,16 @@
             "2020"
         ],
         "image": "img/memoriassoldado1.png"
+    },
+    {
+        "slug": "MacetasVerticales",
+        "title": "Macetas Verticales",
+        "description": "Diseño y fabricación de macetas modulares mediante SketchUp e impresión 3D con Centauri Carbon.",
+        "tags": [
+            "Diseño",
+            "3D",
+            "2025"
+        ],
+        "image": "img/macetasverticales.png"
     }
 ]

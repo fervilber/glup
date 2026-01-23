@@ -1,17 +1,28 @@
 # Corcho
 
-Una aplicación de tareas minimalista y eficiente que utiliza una estética de diseño muy actual conocida como **"Bento Grid"**, que organiza la información en bloques visualmente independientes pero armoniosos.
+Una aplicación de tareas minimalista que utiliza una estética de diseño muy actual conocida como **"Bento Grid"**, que organiza la información en bloques visualmente independientes pero armoniosos.
 Organiza, apunta, cita y comparte (si quieres) tus notas en una página web.
 
 ![Corcho](img/corcho01.png)
 
-Esta aplicacion es fantástica para los que abren cada día el navegador, pues pueden poner su página de corcho la primera y tener organizadas las citas, el tiempo, Notas de cosas pendientes, o incluso la lista de la compra. incluso puedes ponerte las acciones en las que has invertido para tenerlas controladas en cada momento.
+Esta aplicación es fantástica para los que abren cada día el navegador, pues pueden poner su página de corcho la primera y tener organizadas las citas, enlaces, el tiempo, notas de cosas pendientes, o incluso la lista de la compra.
+Hay widget tambien de noticias con enlaces RSS y otro para ver y hacer seguimiento de las acciones de bolsa.
 
-![Corcho1](img/corcho02.png)
+<div class="w-full h-[200px] md:h-[500px] my-10 rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 transition-transform hover:scale-[1.01]">
+    <iframe
+        class="w-full h-full"
+        src="https://www.youtube.com/embed/mmNWBYrEjl0"
+        title="Corcho Demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+</div>
 
-## Corcho: Un Ecosistema de Productividad Modular y Colaborativo
+## Un idea simple pero muy potente
 
-**Corcho** se define como un "dashboard" o tablero personal de nueva generación, diseñado para centralizar la vida digital del usuario en una única interfaz cohesiva y minimalista. A diferencia de las herramientas de productividad tradicionales que fragmentan la información en múltiples aplicaciones, Corcho apuesta por la **modularidad extrema** mediante un sistema de *widgets* personalizables.
+**Corcho** se define como un "dashboard" o tablero personal de nueva generación, diseñado para centralizar la vida digital del usuario en una única interfaz cohesiva y minimalista. A diferencia de las herramientas de productividad tradicionales que fragmentan la información en múltiples aplicaciones, *Corcho* apuesta por la **modularidad extrema** mediante un sistema de *widgets* personalizables.
 
 ### Características Principales y Filosofía de Diseño
 
