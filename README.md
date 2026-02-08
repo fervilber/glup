@@ -2,33 +2,34 @@
 
 Un portafolio web personal moderno, rápido y totalmente responsivo diseñado para mostrar proyectos de desarrollo, diseñado por **F.VilBer**.
 
-Este proyecto es una Single Page Application (SPA) construida con **Vanilla JavaScript** y **Vite**, utilizando **Tailwind CSS** para un diseño visualmente impactante y profesional.
+Este proyecto es una aplicación de alto nivel construida con **React 18**, **Vite** y **Tailwind CSS v4**, enfocada en una estética "Editorial Minimalist" con interacciones fluidas mediante **Framer Motion**.
 
 ## ✨ Características Clave
 
-- **⚡ Rendimiento Ultra-rápido**: Construido sobre Vite para tiempos de carga instantáneos.
-- **🎨 Diseño Moderno y Responsivo**: Adaptable a cualquier dispositivo, con una interfaz limpia y profesional.
-- **🌙 Modo Oscuro/Claro**: Soporte nativo para cambio de tema, persistente y respetuoso con la preferencia del sistema.
-- **🔄 Enrutamiento SPA**: Navegación fluida sin recargas de página mediante hash routing (`/#/projects`).
-- **动态 Gestión de Contenido**: Los proyectos se cargan dinámicamente desde un archivo JSON, facilitando la actualización sin tocar el código.
-- **📱 Menú Móvil**: Navegación optimizada para dispositivos táctiles.
-- **✨ Micro-interacciones**: Animaciones suaves al hacer scroll y transiciones de página.
+- **⚛️ Arquitectura React Moderna**: Componentes modulares, hooks personalizados y carga diferida (lazy loading).
+- **🎨 Tailwind CSS v4**: Configuración nativa basada en CSS para un sistema de diseño más rápido y potente.
+- **✨ Animaciones de Alta Calidad**: Transiciones de página y micro-interacciones suaves con Framer Motion.
+- **🌙 Tema Dinámico Moderno**: Soporte de modo oscuro/claro con persistencia y detección automática del sistema.
+- **🔄 Enrutamiento Declarativo**: Navegación fluida y robusta con React Router v6.
+- **📂 Gestión de Datos Desacoplada**: Proyectos cargados dinámicamente desde un archivo JSON externo.
+- **📱 Mobile-First**: Optimización total para dispositivos móviles con menús interactivos.
 
 ## 🛠️ Stack Tecnológico
 
-- **Core**: Vanilla JavaScript (ES Modules)
+- **Core**: [React 18](https://reactjs.org/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
-- **Estilos**: [Tailwind CSS](https://tailwindcss.com/)
-- **Iconografía**: SVG y Google Fonts imports.
-- **Tipografía**: Inter y Outfit (Google Fonts).
-- **Markdown**: `marked` para renderizar contenido de texto enriquecido.
+- **Estilos**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animaciones**: [Framer Motion](https://www.framer.com/motion/)
+- **Iconografía**: [Lucide React](https://lucide.dev/)
+- **Tipografía**: Inter (Cuerpo) y Outfit (Títulos) via Google Fonts.
+- **Markup**: `marked` para procesamiento de descripciones en Markdown.
 
 ## 📋 Prerrequisitos
 
 Para ejecutar este proyecto localmente, necesitas tener instalado:
 
-- [Node.js](https://nodejs.org/) (Versión 18 o superior recomendada)
-- [npm](https://www.npmjs.com/) (Generalmente incluido con Node.js)
+- [Node.js](https://nodejs.org/) (Versión 20 o superior recomendada)
+- [npm](https://www.npmjs.com/)
 
 ## 🚀 Comenzando
 
@@ -43,94 +44,65 @@ cd glup
 
 ### 2. Instalar Dependencias
 
-Instala las bibliotecas necesarias listadas en `package.json`:
-
 ```bash
 npm install
 ```
 
 ### 3. Modo Desarrollo
 
-Inicia el servidor de desarrollo local con recarga en caliente (HMR):
+Inicia el servidor de desarrollo local:
 
 ```bash
 npm run dev
 ```
 
-Abre tu navegador en la URL que se muestra (generalmente `http://localhost:5173/glup/`).
+Abre tu navegador en `http://localhost:5173/glup/`.
 
 ### 4. Construcción para Producción
 
-Genera los archivos optimizados para despliegue en la carpeta `dist`:
+Genera los archivos optimizados en la carpeta `dist`:
 
 ```bash
 npm run build
 ```
 
-Para previsualizar la versión de producción localmente:
-
-```bash
-npm run preview
-```
-
 ## 🏗️ Arquitectura del Proyecto
-
-La aplicación sigue una arquitectura modular basada en componentes funcionales de JavaScript.
-
-### Estructura de Directorios
 
 ```
 ├── public/
-│   ├── projects/       # Datos e imágenes de los proyectos
-│   │   └── index.json  # "Base de datos" de proyectos
-│   └── vite.svg        # Assets públicos
+│   ├── projects/       # Archivo JSON de datos y assets de proyectos
+│   │   └── index.json  # Fuente de verdad de los contenidos
 ├── src/
-│   ├── components/     # Componentes de UI (Navbar, Home, etc.)
-│   ├── utils/          # Utilidades (animaciones, helpers)
-│   ├── main.js         # Punto de entrada y Router
-│   └── style.css       # Estilos globales y directivas Tailwind
-├── index.html          # HTML Entry Point
-├── package.json        # Dependencias y scripts
-├── tailwind.config.js  # Configuración de diseño y temas
-└── vite.config.js      # Configuración del bundler
+│   ├── components/     # Componentes compartidos (Navbar, Footer, UI)
+│   ├── features/       # Módulos de la aplicación
+│   │   ├── home/       # Componentes de la página de inicio
+│   │   ├── projects/   # Listado y detalle de proyectos
+│   │   └── content/    # páginas estáticas (About, Contact, 404)
+│   ├── hooks/          # Hooks personalizados (fetch de datos)
+│   ├── layouts/        # Layout principal con transiciones
+│   ├── App.jsx         # Configuración de rutas
+│   ├── main.jsx        # Punto de entrada de React
+│   └── index.css       # Configuración global de Tailwind v4
+└── vite.config.js      # Configuración del bundler y plugins
 ```
-
-### Flujo de Datos
-
-1. **Entrada**: `main.js` inicializa el router y estructura el layout principal (`Navbar`, `Main`, `Footer`).
-2. **Enrutamiento**: El router escucha cambios en el hash de la URL (`window.location.hash`) y renderiza el componente correspondiente en `<main id="main-content">`.
-3. **Carga de Datos**:
-   - El componente `Projects` y `ProjectDetail` hacen fetch a `/projects/index.json`.
-   - Se renderizan las tarjetas o detalles basados en estos datos.
-
-### Configuración de Estilos (`tailwind.config.js`)
-
-El proyecto utiliza una paleta de colores personalizada centralizada en la configuración de Tailwind:
-
-- **Brand**: Tonos rojizos/rosados (`#e11d48`) como color primario.
-- **Proyectos**: Una paleta específica para categorizar visualmente los tipos de proyectos.
 
 ## 💾 Gestión de Contenido
 
-Para añadir un nuevo proyecto, no es necesario modificar el código fuente. Simplemente edita el archivo `public/projects/index.json`:
+Para añadir un nuevo proyecto, edita el archivo `public/projects/index.json`. No es necesario recompilar la aplicación para que los cambios se reflejen si se sirven desde un servidor estático.
 
 ```json
 {
     "slug": "nombre-del-proyecto",
     "title": "Título del Proyecto",
-    "description": "Breve descripción...",
-    "tags": ["Tag1", "Tag2"],
+    "description": "Breve descripción en **markdown**...",
+    "tags": ["React", "2026", "Design"],
     "image": "img/nombre-imagen.png"
 }
 ```
 
-Asegúrate de añadir la imagen correspondiente en la carpeta `public/img/` (o la ruta que definas).
-
 ## 🌍 Despliegue
 
-El proyecto está configurado para ser desplegado en un subdirectorio (por ejemplo, GitHub Pages), debido a la configuración `base: '/glup/'` en `vite.config.js`.
-
-Si deseas desplegarlo en la raíz de un dominio (ej. `midominio.com`), edita `vite.config.js` y cambia `base` a `'/'`.
+El proyecto utiliza `base: '/glup/'`. Si despliegas en la raíz de un dominio, recuerda actualizar este valor en `vite.config.js`.
 
 ---
 
