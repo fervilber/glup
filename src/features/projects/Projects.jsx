@@ -39,13 +39,13 @@ const Projects = () => {
                     {tagFilter ? (
                         <>Proyectos: <span className="text-primary italic">{tagFilter}</span></>
                     ) : (
-                        <>Nuestros <span className="text-primary italic">Proyectos</span></>
+                        <>Mis <span className="text-primary italic">Proyectos</span></>
                     )}
                 </h1>
                 <p className="text-slate-700 dark:text-slate-200">
                     {tagFilter
                         ? `Mostrando proyectos etiquetados con "${tagFilter}".`
-                        : "Una selección de trabajos desarrollados en diversas tecnologías, desde blogs hasta aplicaciones financieras complejas."
+                        : "Una selección de mis trabajos desarrollados en diversas tecnologías, desde blogs hasta aplicaciones financieras complejas."
                     }
                 </p>
                 {tagFilter && (
