@@ -1,3 +1,13 @@
+---
+title: "EnRdados Blog"
+description: "un blog donde hablamos de R, tecnología y mucho más."
+year: 2019
+tags: ["Blog", "Programación"]
+image: "img/erdadoswed.png"
+url: "https://enrdados.netlify.app/"
+
+---
+
 # EnRdados Blog
 
 Este [proyecto de Blog](https://enrdados.netlify.app/) nació en el 2017, cuando empecé a tomarme en serio la programamción con R. Me apunté al congreso que hubo en Murcia y la verdad que lo pasé tan bien, conocí a tanta gente involucrada de buena fe en este lenguaje tan maravilloso que me puse las pilas para aprender más R y compartir los conocimientos, así nació el Blog

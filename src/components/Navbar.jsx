@@ -20,10 +20,10 @@ const Navbar = ({ isDark, toggleTheme }) => {
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2 group">
                         <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold group-hover:scale-110 transition-transform">
-                            G
+                            F
                         </div>
-                        <span className="text-xl font-display font-extrabold tracking-tight">
-                            Glup <span className="text-primary">Portfolio</span>
+                        <span className="text-xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white">
+                            F.VilBer <span className="text-primary">Portfolio</span>
                         </span>
                     </Link>
 
@@ -34,7 +34,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
                                 key={link.path}
                                 to={link.path}
                                 className={({ isActive }) =>
-                                    `text-sm font-medium transition-colors hover:text-primary ${isActive ? 'text-primary' : 'text-slate-600 dark:text-slate-400'
+                                    `text-sm font-medium transition-all hover:text-primary px-4 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-white/5 ${isActive ? 'text-primary bg-slate-100 dark:bg-white/5' : 'text-slate-600 dark:text-slate-400'
                                     }`
                                 }
                             >

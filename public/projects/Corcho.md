@@ -1,3 +1,12 @@
+---
+title: "Corcho"
+description: "Mi corcho digital, un gestor de tareas minimalista."
+year: 2025
+tags: ["app", "gestión"]
+image: "img/corcho01.png"
+url: "https://corcho.lovable.app/"
+---
+
 # Corcho
 
 Una aplicación de tareas minimalista que utiliza una estética de diseño muy actual conocida como **"Bento Grid"**, que organiza la información en bloques visualmente independientes pero armoniosos.

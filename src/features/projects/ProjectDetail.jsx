@@ -12,6 +12,15 @@ const ProjectDetail = () => {
     const [project, setProject] = useState(null);
     const [contentMarkdown, setContentMarkdown] = useState('');
 
+    // Function to remove YAML frontmatter and first H1 from markdown
+    const stripFrontmatter = (markdown) => {
+        // Remove YAML frontmatter
+        let cleaned = markdown.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, '');
+        // Remove first H1 heading (since we show title in the header)
+        cleaned = cleaned.replace(/^#\s+.*?\n/, '');
+        return cleaned.trim();
+    };
+
     useEffect(() => {
         if (!loading && projects.length > 0) {
             const found = projects.find(p => p.slug === slug);
@@ -43,7 +52,7 @@ const ProjectDetail = () => {
         : `${import.meta.env.BASE_URL}${project.image}`;
 
     return (
-        <Container className="max-w-4xl pb-24">
+        <Container className="max-w-6xl pb-24">
             {/* Back Button */}
             <Link
                 to="/projects"
@@ -55,46 +64,34 @@ const ProjectDetail = () => {
 
             <div className="space-y-12">
                 {/* Header */}
-                <div className="space-y-6">
-                    <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-tight">
+                <div className="space-y-4 max-w-4xl">
+                    <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white">
                         {project.title}
                     </h1>
-
-                    <div className="flex flex-wrap gap-4 text-sm font-medium text-slate-500 dark:text-slate-400">
-                        <div className="flex items-center gap-2">
-                            <Calendar size={16} />
-                            <span>{project.tags.find(t => !isNaN(t)) || '2026'}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Tag size={16} />
-                            <div className="flex gap-2">
-                                {project.tags.filter(t => isNaN(t)).map(tag => (
-                                    <span key={tag}>{tag}</span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                    <p className="text-xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+                        {project.description}
+                    </p>
                 </div>
 
-                {/* Featured Image */}
-                <div className="relative group">
-                    <div className="absolute inset-0 bg-primary/20 blur-3xl -z-10 group-hover:scale-110 transition-transform duration-700" />
-                    <img
-                        src={imagePath}
-                        alt={project.title}
-                        className="w-full rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-white/5"
-                    />
-                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                    {/* Main Content (Image + Markdown) */}
+                    <div className="lg:col-span-2 space-y-12">
+                        {/* Featured Image */}
+                        <div className="relative group">
+                            <div className="absolute inset-0 bg-primary/20 blur-3xl -z-10 group-hover:scale-110 transition-transform duration-700" />
+                            <img
+                                src={imagePath}
+                                alt={project.title}
+                                className="w-full rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-white/5"
+                            />
+                        </div>
 
-                {/* Content */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    {/* Main Info */}
-                    <div className="md:col-span-2 space-y-8">
+                        {/* Detailed Content */}
                         <div className="prose prose-slate dark:prose-invert max-w-none prose-img:rounded-3xl prose-img:shadow-lg prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
                             <div
                                 dangerouslySetInnerHTML={{
                                     __html: marked.parse(
-                                        (contentMarkdown || project.description)
+                                        stripFrontmatter(contentMarkdown || "")
                                             .replace(/!\[(.*?)\]\((img\/.*?)\)/g, `![$1](${import.meta.env.BASE_URL}$2)`)
                                     )
                                 }}
@@ -102,33 +99,62 @@ const ProjectDetail = () => {
                         </div>
                     </div>
 
-                    {/* Sidebar */}
-                    <div className="space-y-8">
-                        <div className="p-8 rounded-3xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5 space-y-6">
-                            <h3 className="text-lg font-bold">Detalles</h3>
+                    {/* Sidebar (Sticky on desktop) */}
+                    <aside className="space-y-8 lg:sticky lg:top-32">
+                        <div className="p-8 rounded-[2.5rem] bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5 space-y-8 shadow-sm">
+                            <h3 className="text-xl font-bold font-display text-slate-900 dark:text-white">Detalles del Proyecto</h3>
 
-                            <div className="space-y-4">
-                                <div>
-                                    <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Tecnologías</label>
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.tags.map(tag => (
-                                            <span key={tag} className="px-2 py-1 bg-white dark:bg-zinc-800 rounded text-xs border border-slate-200 dark:border-slate-700">
-                                                {tag}
-                                            </span>
-                                        ))}
+                            <div className="space-y-6">
+                                {/* Metadata Items */}
+                                <div className="space-y-4">
+                                    <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+                                        <Calendar size={18} className="text-primary" />
+                                        <span className="text-sm font-medium">Año: {project.tags.find(t => !isNaN(t)) || '2026'}</span>
+                                    </div>
+
+                                    <div className="space-y-3">
+                                        <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+                                            <Tag size={18} className="text-primary" />
+                                            <span className="text-sm font-medium">Tecnologías:</span>
+                                        </div>
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.tags.filter(t => isNaN(t)).map(tag => (
+                                                <Link
+                                                    key={tag}
+                                                    to={`/projects?tag=${tag}`}
+                                                    className="px-3 py-1 bg-white dark:bg-zinc-800 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:border-primary hover:text-primary transition-all shadow-sm"
+                                                >
+                                                    {tag}
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
 
-                                <a
-                                    href="#"
-                                    className="flex items-center justify-center w-full h-12 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold gap-2 hover:scale-[1.02] active:scale-95 transition-all"
-                                >
-                                    Visitar Website
-                                    <ExternalLink size={16} />
-                                </a>
+                                {/* Actions */}
+                                {project.url && (
+                                    <div className="pt-6 border-t border-slate-200 dark:border-slate-800">
+                                        <a
+                                            href={project.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center w-full h-14 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold gap-3 hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-slate-900/10 dark:shadow-none"
+                                        >
+                                            Ver Proyecto
+                                            <ExternalLink size={18} />
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
-                    </div>
+
+                        {/* Additional Info Box (Optional) */}
+                        <div className="px-8 py-6 rounded-3xl bg-primary/5 border border-primary/10 text-sm text-slate-600 dark:text-slate-400">
+                            <p className="italic">
+                                "Este proyecto refleja mi compromiso con la calidad visual y la funcionalidad técnica."
+                            </p>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </Container>

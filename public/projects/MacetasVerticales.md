@@ -1,3 +1,11 @@
+---
+title: "Macetas Verticales"
+description: "Diseño y fabricación de macetas modulares mediante SketchUp e impresión 3D con Centauri Carbon."
+year: 2025
+tags: ["Diseño", "3D"]
+image: "img/macetasverticales.png"
+---
+
 # Macetas Verticales
 
 Este proyecto combina el diseño industrial con la decoración funcional, permitiendo aprovechar el espacio vertical para el cultivo de plantas en interiores o balcones reducidos.

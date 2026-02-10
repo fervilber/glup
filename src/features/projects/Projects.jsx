@@ -4,8 +4,12 @@ import useProjects from '../../hooks/useProjects';
 import Container from '../../components/ui/Container';
 import ProjectCard from './ProjectCard';
 
+import { useSearchParams } from 'react-router-dom';
+
 const Projects = () => {
     const { projects, loading, error } = useProjects();
+    const [searchParams, setSearchParams] = useSearchParams();
+    const tagFilter = searchParams.get('tag');
 
     if (loading) return (
         <Container className="py-24 text-center">
@@ -24,22 +28,41 @@ const Projects = () => {
         </Container>
     );
 
+    const filteredProjects = tagFilter
+        ? projects.filter(p => p.tags.includes(tagFilter))
+        : projects;
+
     return (
         <Container className="space-y-16">
             <div className="text-center space-y-4 max-w-2xl mx-auto">
-                <h1 className="text-4xl md:text-5xl font-display font-extrabold tracking-tight">
-                    Nuestros <span className="text-primary italic">Proyectos</span>
+                <h1 className="text-4xl md:text-5xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    {tagFilter ? (
+                        <>Proyectos: <span className="text-primary italic">{tagFilter}</span></>
+                    ) : (
+                        <>Nuestros <span className="text-primary italic">Proyectos</span></>
+                    )}
                 </h1>
-                <p className="text-slate-500 dark:text-slate-400">
-                    Una selección de trabajos desarrollados en diversas tecnologías, desde blogs hasta aplicaciones financieras complejas.
+                <p className="text-slate-700 dark:text-slate-200">
+                    {tagFilter
+                        ? `Mostrando proyectos etiquetados con "${tagFilter}".`
+                        : "Una selección de trabajos desarrollados en diversas tecnologías, desde blogs hasta aplicaciones financieras complejas."
+                    }
                 </p>
+                {tagFilter && (
+                    <button
+                        onClick={() => setSearchParams({})}
+                        className="text-primary font-bold text-sm hover:underline cursor-pointer"
+                    >
+                        Ver todos los proyectos
+                    </button>
+                )}
             </div>
 
             <motion.div
                 layout
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-24"
             >
-                {projects.map((project, index) => (
+                {filteredProjects.map((project, index) => (
                     <ProjectCard
                         key={project.slug}
                         project={project}

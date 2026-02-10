@@ -17,7 +17,7 @@ const ProjectCard = ({ project, index }) => {
             className="group relative flex flex-col bg-white dark:bg-zinc-900 rounded-[2rem] overflow-hidden border border-slate-100 dark:border-white/5 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
         >
             {/* Image Container */}
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <Link to={`/project/${project.slug}`} className="relative aspect-[4/3] overflow-hidden">
                 <img
                     src={imagePath}
                     alt={project.title}
@@ -32,23 +32,24 @@ const ProjectCard = ({ project, index }) => {
                         <ExternalLink size={18} />
                     </div>
                 </div>
-            </div>
+            </Link>
 
             {/* Content */}
             <div className="flex-grow p-8 space-y-4">
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                        <span
+                        <Link
                             key={tag}
-                            className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 group-hover:bg-primary/10 group-hover:text-primary transition-colors"
+                            to={`/projects?tag=${tag}`}
+                            className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors"
                         >
                             {tag}
-                        </span>
+                        </Link>
                     ))}
                 </div>
 
-                <h3 className="text-2xl font-display font-bold group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
                     {project.title}
                 </h3>
 

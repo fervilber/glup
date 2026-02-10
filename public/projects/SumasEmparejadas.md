@@ -1,3 +1,12 @@
+---
+title: "Libros - Pasatiempos"
+description: "Colección de libros de pasatiempos que vendemos en Amazon."
+year: 2024
+tags: ["Entretenimiento", "app"]
+image: "img/sumaemparejadas03.png"
+url: "https://amzn.eu/d/89Nsquz"
+---
+
 # Libros de Pasatiempos SUMAS EMPAREJADAS
 
 Los pasatiempos de [sumas emparejadas](https://amzn.eu/d/47TMqBV) son un juego matemático simple y divertido para toda la familia. Tan solo debes saber sumar para jugar y pasar un buen rato.

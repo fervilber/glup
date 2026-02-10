@@ -1,3 +1,11 @@
+---
+title: "Memorias de un soldado 1919-24"
+description: "Edición y publicación de las memorias de mi abuelo. Un proyecto de recuperación histórica y producción editorial."
+year: 2020
+tags: ["Libro", "Historia"]
+image: "img/memoriassoldado1.png"
+---
+
 # Memorias de un soldado 1919-24
 
 Este proyecto es uno de los más personales y emotivos en los que he trabajado. Consistió en la edición integral de las memorias de mi abuelo, relatando sus vivencias durante los años 1919 a 1924 que deja su pueblo y se va a la mili, donde cuenta muchas anécdotas, viajes y su vida en Mahón,hasta que le mandan a la guerra del Riff en Marruecos.

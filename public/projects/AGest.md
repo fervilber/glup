@@ -1,3 +1,12 @@
+---
+title: "AGEST-app"
+description: "Una plataforma de gestión integral diseñada para la administración de asociaciones, AMPAs y ONGs."
+year: 2025
+tags: ["app", "Finanzas", "Asociaciones"]
+image: "img/ASOCIAGEST01.png"
+url: "https://ampa-conservatorio-cieza.lovable.app"
+---
+
 # AGest
 
 Una app totalmente web para la gestión de Asociaciones, AMPAS etc.. La idea es facilitar a los miembros de la Junta Directiva o aquellos que realmente se involucren en el trabajo diario de la asociación, a llevar las cuentas, los documentos, y listados de socios que nadie quiere responsabilizarse.

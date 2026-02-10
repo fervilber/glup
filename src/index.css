@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-display: "Outfit", var(--font-sans);
@@ -15,43 +17,55 @@
   --color-brand-800: oklch(0.38 0.18 10);
   --color-brand-900: oklch(0.33 0.15 10);
 
-  /* Semantic Colors */
+  /* Semantic Colors - with HEX Fallbacks for older browsers/Firefox */
+  --color-primary: #d946ef;
+  /* Fallback */
   --color-primary: var(--color-brand-600);
-  --color-surface: oklch(0.99 0 0);
+
+  --color-surface-hex: #f5f5f5;
+  --color-surface: oklch(0.97 0.01 250);
+  /* Living Alabaster */
+
+  --color-surface-dark-hex: #1a1a1a;
   --color-surface-dark: oklch(0.12 0.01 250);
+  /* Deep Graphite */
+
+  --color-text-hex: #1a1a1a;
+  --color-text: oklch(0.25 0.02 250);
+  /* Graphite Black */
+  --color-text-muted: oklch(0.45 0.03 250);
+  --color-text-dark-hex: #f9f9f9;
+  --color-text-dark: oklch(0.98 0.01 250);
+  /* Snow White */
+  --color-text-muted-dark: oklch(0.70 0.02 250);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Force font smoothing for better rendering on Firefox/Mac */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply bg-surface text-slate-900 transition-colors duration-300 antialiased relative;
-    font-family: var(--font-sans);
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.035;
-    pointer-events: none;
-    z-index: 50;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  }
-
-  .dark body::before {
-    opacity: 0.05;
+    background-color: var(--color-surface-hex);
+    background-color: var(--color-surface);
+    color: var(--color-text-hex);
+    color: var(--color-text);
+    @apply transition-colors duration-300 relative min-h-screen;
+    font-family: "Inter", system-ui, sans-serif;
   }
 
   .dark body {
-    @apply bg-surface-dark text-slate-100;
+    background-color: var(--color-surface-dark-hex);
+    background-color: var(--color-surface-dark);
+    color: var(--color-text-dark-hex);
+    color: var(--color-text-dark);
   }
 
+  /* Universal text color reinforcement for light mode headers and normal text */
   h1,
   h2,
   h3,
@@ -59,7 +73,17 @@
   h5,
   h6 {
     font-family: var(--font-display);
-    @apply font-bold tracking-tight;
+    @apply font-bold tracking-tight transition-colors duration-300;
+    color: var(--color-text);
+  }
+
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6 {
+    color: var(--color-text-dark);
   }
 }
 
@@ -74,6 +98,63 @@
 
 ::-webkit-scrollbar-thumb {
   @apply bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors;
+}
+
+/* Editorial Content Styling (Markdown) */
+.prose {
+  @apply max-w-none text-slate-800 dark:text-slate-300 leading-relaxed;
+}
+
+.prose p {
+  @apply text-justify mb-6 sm:text-lg;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  @apply text-slate-900 dark:text-white mt-12 mb-6 font-display font-extrabold tracking-tight;
+}
+
+.prose h1 {
+  @apply text-4xl md:text-5xl border-b-2 border-primary/20 pb-4;
+}
+
+.prose h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+.prose h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+.prose ul,
+.prose ol {
+  @apply my-8 space-y-3 pl-6;
+}
+
+.prose li {
+  @apply relative pl-4 list-none;
+}
+
+.prose li::before {
+  content: "→";
+  @apply absolute left-[-1.5rem] text-primary font-bold opacity-70;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-primary bg-slate-50 dark:bg-white/5 p-6 rounded-r-3xl italic text-slate-700 dark:text-slate-300 my-8;
+}
+
+.prose img {
+  @apply rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-white/5 my-12;
+}
+
+.prose a {
+  @apply text-primary font-bold no-underline hover:underline decoration-2 underline-offset-4;
+}
+
+.prose strong {
+  @apply text-slate-900 dark:text-white font-extrabold;
 }
 
 /* Page Transitions */

@@ -27,19 +27,19 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1, duration: 0.5 }}
-                            className="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight"
+                            className="text-5xl md:text-7xl font-display font-extrabold tracking-tight leading-tight"
                         >
-                            Construyendo el <span className="text-primary italic">Futuro</span> <br />
-                            una línea a la vez.
+                            <span className="text-slate-900 dark:text-white">Construyendo el</span> <span className="text-primary italic">Futuro</span> <br />
+                            <span className="text-slate-900 dark:text-white">Digital.</span>
                         </motion.h1>
 
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2, duration: 0.5 }}
-                            className="max-w-2xl mx-auto text-lg md:text-xl text-slate-500 dark:text-slate-400 font-medium"
+                            className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium"
                         >
-                            Soy F.VilBer, desarrollador y diseñador enfocado en crear experiencias web excepcionales, rápidas y minimalistas.
+                            Hola, soy Fernando (F.VilBer), Ingeniero de Caminos, Canales y Puertos, escultor, padre feliz de 4 hijos, y en mis ratos libres, además programador, inventor de mundos digitales. Aquí verás ejemplos de mis apps y webs: excepcionales, rápidas y minimalistas. Te presento mis hobbies y pasiones fuera del curro.
                         </motion.p>
 
                         <motion.div
@@ -57,7 +57,7 @@ const Home = () => {
                             </Link>
                             <Link
                                 to="/about"
-                                className="inline-flex items-center justify-center h-12 px-8 rounded-full border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-semibold transition-all hover:bg-slate-50 dark:hover:bg-slate-900"
+                                className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold transition-all hover:scale-105 active:scale-95"
                             >
                                 Sobre mí
                             </Link>
@@ -74,7 +74,7 @@ const Home = () => {
             <section className="bg-slate-50 dark:bg-white/5 py-24 transition-colors">
                 <Container>
                     <div className="text-center space-y-4 mb-16">
-                        <h2 className="text-3xl md:text-4xl font-display font-bold">Lo que hago mejor</h2>
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">Lo que hago mejor</h2>
                         <p className="text-slate-500 dark:text-slate-400 max-w-lg mx-auto">
                             Combino diseño creativo con ingeniería sólida para resolver problemas complejos.
                         </p>
@@ -85,9 +85,9 @@ const Home = () => {
                             <div className="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-900/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                                 <Code size={24} />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Desarrollo Web</h3>
+                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Desarrollo de Ideas</h3>
                             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                                Frontend moderno con React, Vite y Tailwind. Código limpio, optimizado y escalable.
+                                Desde el concepto a la solución final aprovechando la tecnología moderna con React, Vite y Tailwind. Código limpio, optimizado y escalable.
                             </p>
                         </div>
 
@@ -95,7 +95,7 @@ const Home = () => {
                             <div className="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-6 group-hover:scale-110 transition-transform">
                                 <Palette size={24} />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Diseño UI/UX</h3>
+                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Diseño</h3>
                             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                                 Interfaces intuitivas y hermosas. Enfoque en la usabilidad y la identidad visual de marca.
                             </p>
@@ -105,7 +105,7 @@ const Home = () => {
                             <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
                                 <Zap size={24} />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Optimización</h3>
+                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Optimización</h3>
                             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                                 Rendimiento extremo, SEO y accesibilidad para asegurar que tu proyecto llegue a todos.
                             </p>
@@ -119,7 +119,7 @@ const Home = () => {
                 <Container>
                     <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
                         <div className="space-y-4">
-                            <h2 className="text-3xl md:text-4xl font-display font-bold">Proyectos Destacados</h2>
+                            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">Proyectos Destacados</h2>
                             <p className="text-slate-500 dark:text-slate-400 max-w-lg">
                                 Una muestra de mis trabajos más recientes y representativos.
                             </p>
@@ -139,7 +139,7 @@ const Home = () => {
                     </div>
                 </Container>
             </section>
-        </div>
+        </div >
     );
 };
 
@@ -165,9 +165,11 @@ const FeaturedProjectPreview = ({ slug }) => {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-10 flex flex-col justify-end">
-                    <h3 className="text-2xl font-display font-bold text-white mb-2">{project.title}</h3>
-                    <p className="text-slate-300 text-sm line-clamp-2 max-w-sm">{project.description}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-10 flex flex-col justify-end">
+                    <h3 className="text-2xl font-display font-bold text-white group-hover:text-primary transition-colors">
+                        {project.title}
+                    </h3>
+                    <p className="text-slate-200 text-sm line-clamp-2 max-w-sm">{project.description}</p>
                 </div>
             </Link>
         </motion.div>

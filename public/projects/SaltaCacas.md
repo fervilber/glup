@@ -1,3 +1,12 @@
+---
+title: "SaltaCacas Game"
+description: "Mi primer juego web."
+year: 2025
+tags: ["Juego", "app"]
+image: "https://enrdados.netlify.app/post/2024-05-17-mi-primer-videojuego-en-python/images/portada_saltacacas.png"
+url: "https://fervilber.github.io/saltacacasweb/"
+---
+
 # SaltaCacas
 
 Mi primer juego digital, hecho con ayuda de mis peques.

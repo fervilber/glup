@@ -1,38 +1,15 @@
 [
     {
-        "slug": "enrdados",
-        "title": "EnRdados Blog",
-        "description": "un blog donde hablamos de R, tecnología y mucho más.",
+        "slug": "NaturismoComputacional",
+        "title": "Naturismo Computacional",
+        "description": "Exploración de formas orgánicas y vida digital mediante algoritmos generativos.",
         "tags": [
-            "Blog",
-            "Programación",
-            "2019"
+            "Arte Algorítmico",
+            "JavaScript",
+            "P5.js"
         ],
-        "image": "img/erdadoswed.png",
-        "image_old_reference": "https://placehold.co/600x400/2563eb/white?text=EnRdados"
-    },
-    {
-        "slug": "FinFer",
-        "title": "Finanzas Fer-sonales",
-        "description": "Controla todas tus cuentas e inversiones desde una misma app y gestiona de verdad tu patrimonio.",
-        "tags": [
-            "Finanzas",
-            "Bolsa",
-            "app",
-            "2025"
-        ],
-        "image": "img/finfer_analisis3.png"
-    },
-    {
-        "slug": "Corcho",
-        "title": "Corcho",
-        "description": "Mi corcho digital, un gestor de tareas minimalista.",
-        "tags": [
-            "app",
-            "gestión",
-            "2025"
-        ],
-        "image": "img/corcho01.png"
+        "image": "img/naturismocomputacional.png",
+        "url": "https://fervilber.github.io/GenArt/index.html"
     },
     {
         "slug": "AGest",
@@ -41,43 +18,33 @@
         "tags": [
             "app",
             "Finanzas",
-            "Asociaciones",
-            "2025"
+            "Asociaciones"
         ],
-        "image": "img/ASOCIAGEST01.png"
+        "image": "img/ASOCIAGEST01.png",
+        "url": "https://ampa-conservatorio-cieza.lovable.app"
     },
     {
-        "slug": "SaltaCacas",
-        "title": "SaltaCacas Game",
-        "description": "Mi primer juego web.",
+        "slug": "Corcho",
+        "title": "Corcho",
+        "description": "Mi corcho digital, un gestor de tareas minimalista.",
         "tags": [
-            "Juego",
             "app",
-            "2025"
+            "gestión"
         ],
-        "image": "https://enrdados.netlify.app/post/2024-05-17-mi-primer-videojuego-en-python/images/portada_saltacacas.png"
+        "image": "img/corcho01.png",
+        "url": "https://corcho.lovable.app/"
     },
     {
-        "slug": "SumasEmparejadas",
-        "title": "Libros - Pasatiempos",
-        "description": "Colección de libros de pasatiempos que vendemos en Amazon.",
+        "slug": "FinFer",
+        "title": "Finanzas Fer-sonales",
+        "description": "Controla todas tus cuentas e inversiones desde una misma app y gestiona de verdad tu patrimonio.",
         "tags": [
-            "Entretenimiento",
-            "app",
-            "2024"
+            "Finanzas",
+            "Bolsa",
+            "app"
         ],
-        "image": "img/sumaemparejadas03.png"
-    },
-    {
-        "slug": "MemoriasSoldado",
-        "title": "Memorias de un soldado 1919-24",
-        "description": "Edición y publicación de las memorias de mi abuelo. Un proyecto de recuperación histórica y producción editorial.",
-        "tags": [
-            "Libro",
-            "Historia",
-            "2020"
-        ],
-        "image": "img/memoriassoldado1.png"
+        "image": "img/finfer_analisis3.png",
+        "url": "https://finfer.lovable.app/"
     },
     {
         "slug": "MacetasVerticales",
@@ -85,9 +52,53 @@
         "description": "Diseño y fabricación de macetas modulares mediante SketchUp e impresión 3D con Centauri Carbon.",
         "tags": [
             "Diseño",
-            "3D",
-            "2025"
+            "3D"
         ],
-        "image": "img/macetasverticales.png"
+        "image": "img/macetasverticales.png",
+        "url": ""
+    },
+    {
+        "slug": "SaltaCacas",
+        "title": "SaltaCacas Game",
+        "description": "Mi primer juego web.",
+        "tags": [
+            "Juego",
+            "app"
+        ],
+        "image": "https://enrdados.netlify.app/post/2024-05-17-mi-primer-videojuego-en-python/images/portada_saltacacas.png",
+        "url": "https://fervilber.github.io/saltacacasweb/"
+    },
+    {
+        "slug": "SumasEmparejadas",
+        "title": "Libros - Pasatiempos",
+        "description": "Colección de libros de pasatiempos que vendemos en Amazon.",
+        "tags": [
+            "Entretenimiento",
+            "app"
+        ],
+        "image": "img/sumaemparejadas03.png",
+        "url": "https://amzn.eu/d/89Nsquz"
+    },
+    {
+        "slug": "MemoriasSoldado",
+        "title": "Memorias de un soldado 1919-24",
+        "description": "Edición y publicación de las memorias de mi abuelo. Un proyecto de recuperación histórica y producción editorial.",
+        "tags": [
+            "Libro",
+            "Historia"
+        ],
+        "image": "img/memoriassoldado1.png",
+        "url": ""
+    },
+    {
+        "slug": "enrdados",
+        "title": "EnRdados Blog",
+        "description": "un blog donde hablamos de R, tecnología y mucho más.",
+        "tags": [
+            "Blog",
+            "Programación"
+        ],
+        "image": "img/erdadoswed.png",
+        "url": "https://enrdados.netlify.app/"
     }
 ]

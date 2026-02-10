@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import BackgroundArt from '../components/BackgroundArt';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { useScroll, useSpring } from 'framer-motion';
@@ -13,26 +14,33 @@ const RootLayout = ({ children }) => {
         restDelta: 0.001
     });
 
-    const [isDark, setIsDark] = useState(
-        localStorage.getItem('color-theme') === 'dark' ||
-        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    );
+    // Lazy initialization of state
+    const [isDark, setIsDark] = useState(() => {
+        const saved = localStorage.getItem('color-theme');
+        if (saved) return saved === 'dark';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    });
+
     const location = useLocation();
 
     useEffect(() => {
+        const root = document.documentElement;
         if (isDark) {
-            document.documentElement.classList.add('dark');
+            root.classList.add('dark');
             localStorage.setItem('color-theme', 'dark');
         } else {
-            document.documentElement.classList.remove('dark');
+            root.classList.remove('dark');
             localStorage.setItem('color-theme', 'light');
         }
     }, [isDark]);
 
-    const toggleTheme = () => setIsDark(!isDark);
+    const toggleTheme = () => setIsDark(prev => !prev);
 
     return (
         <div className="flex flex-col min-h-screen selection:bg-brand-100 selection:text-brand-900 dark:selection:bg-brand-900/30 dark:selection:text-brand-200">
+            {/* Algorithmic Background - Memoized inside its own component */}
+            <BackgroundArt />
+
             {/* Scroll Progress Bar */}
             <motion.div
                 className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-[100]"
@@ -42,13 +50,13 @@ const RootLayout = ({ children }) => {
             <Navbar isDark={isDark} toggleTheme={toggleTheme} />
 
             <main className="flex-grow pt-24 pb-12">
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" initial={false}>
                     <motion.div
                         key={location.pathname}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2, ease: "linear" }}
                     >
                         {children}
                     </motion.div>
