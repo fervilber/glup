@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Favicon PNG</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #b41414;
+            margin-bottom: 10px;
+        }
+
+        .preview {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .preview-item {
+            text-align: center;
+        }
+
+        .preview-item canvas {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+        }
+
+        .preview-item p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        button {
+            background: #b41414;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #8a0f0f;
+        }
+
+        .instructions {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #b41414;
+            margin-top: 20px;
+        }
+
+        .instructions h3 {
+            margin-top: 0;
+            color: #b41414;
+        }
+
+        .instructions ol {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎨 Generador de Favicon PNG</h1>
+        <p>Genera versiones PNG del favicon para compatibilidad con navegadores antiguos</p>
+
+        <div class="preview">
+            <div class="preview-item">
+                <canvas id="canvas32" width="32" height="32"></canvas>
+                <p>32x32 px<br><button onclick="downloadCanvas('canvas32', 'favicon-32x32.png')">Descargar</button></p>
+            </div>
+            <div class="preview-item">
+                <canvas id="canvas192" width="192" height="192"></canvas>
+                <p>192x192 px<br><button onclick="downloadCanvas('canvas192', 'favicon-192x192.png')">Descargar</button>
+                </p>
+            </div>
+            <div class="preview-item">
+                <canvas id="canvas180" width="180" height="180"></canvas>
+                <p>180x180 px (Apple)<br><button
+                        onclick="downloadCanvas('canvas180', 'apple-touch-icon.png')">Descargar</button></p>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 Instrucciones:</h3>
+            <ol>
+                <li>Haz clic en cada botón "Descargar" para obtener las versiones PNG</li>
+                <li>Guarda los archivos descargados en la carpeta <code>public/</code> de tu proyecto</li>
+                <li>Los archivos ya están listos para usar - el HTML ya está configurado</li>
+                <li>Recarga tu web con Ctrl+Shift+R para ver los cambios</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // SVG del favicon
+        const svgString = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#b41414" />
+  <text x="50" y="72" font-family="Arial, sans-serif" font-size="65" text-anchor="middle" fill="white" font-weight="bold">F</text>
+</svg>`;
+
+        // Función para renderizar SVG en canvas
+        function renderSVGToCanvas(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0, size, size);
+            };
+
+            const blob = new Blob([svgString], { type: 'image/svg+xml' });
+            const url = URL.createObjectURL(blob);
+            img.src = url;
+        }
+
+        // Función para descargar canvas como PNG
+        function downloadCanvas(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            canvas.toBlob(function (blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+        }
+
+        // Renderizar todos los canvas al cargar
+        window.onload = function () {
+            renderSVGToCanvas('canvas32', 32);
+            renderSVGToCanvas('canvas192', 192);
+            renderSVGToCanvas('canvas180', 180);
+        };
+    </script>
+</body>
+
+</html>
