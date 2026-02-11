@@ -13,16 +13,20 @@ const ProjectCard = ({ project, index }) => {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: index * 0.05, duration: 0.3 }}
             className="group relative flex flex-col bg-white dark:bg-zinc-900 rounded-[2rem] overflow-hidden border border-slate-100 dark:border-white/5 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
         >
             {/* Image Container */}
-            <Link to={`/project/${project.slug}`} className="relative aspect-[4/3] overflow-hidden">
+            <Link to={`/project/${project.slug}`} className="relative aspect-[4/3] overflow-hidden bg-slate-100 dark:bg-slate-800">
                 <img
                     src={imagePath}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                     loading="lazy"
+                    onError={(e) => {
+                        console.error(`Error loading image for ${project.slug}:`, imagePath);
+                        e.target.style.display = 'none';
+                    }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

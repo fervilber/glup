@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BackgroundArt from '../components/BackgroundArt';
+import ScrollToTop from '../components/ScrollToTop';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { useScroll, useSpring } from 'framer-motion';
@@ -38,6 +39,9 @@ const RootLayout = ({ children }) => {
 
     return (
         <div className="flex flex-col min-h-screen selection:bg-brand-100 selection:text-brand-900 dark:selection:bg-brand-900/30 dark:selection:text-brand-200">
+            {/* Utility to ensure top scroll on navigation */}
+            <ScrollToTop />
+
             {/* Algorithmic Background - Memoized inside its own component */}
             <BackgroundArt />
 
@@ -50,13 +54,15 @@ const RootLayout = ({ children }) => {
             <Navbar isDark={isDark} toggleTheme={toggleTheme} />
 
             <main className="flex-grow pt-24 pb-12">
+                {/* mode="wait" asegura que el contenido anterior se desmonte antes de montar el nuevo,
+                    evitando problemas de superposición. Transiciones ultra-rápidas (100ms) para mantener sensación de rapidez */}
                 <AnimatePresence mode="wait" initial={false}>
                     <motion.div
                         key={location.pathname}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2, ease: "linear" }}
+                        transition={{ duration: 0.1, ease: "easeInOut" }}
                     >
                         {children}
                     </motion.div>
@@ -67,5 +73,6 @@ const RootLayout = ({ children }) => {
         </div>
     );
 };
+
 
 export default RootLayout;

@@ -86,13 +86,11 @@ async function generateIndex() {
                 slug,
                 title: frontmatter.title,
                 description: frontmatter.description || '',
+                year: frontmatter.year, // Incluir year en el output
                 tags: frontmatter.tags || [],
                 image: frontmatter.image || `img/${slug.toLowerCase()}.png`,
                 url: frontmatter.url || ''
             };
-
-            // Store year for sorting (but don't include in output)
-            project._year = frontmatter.year;
 
             projects.push(project);
             console.log(`✅ ${slug}: Loaded (${frontmatter.year})`);
@@ -106,10 +104,7 @@ async function generateIndex() {
         }
 
         // Sort by year (newest first)
-        projects.sort((a, b) => b._year - a._year);
-
-        // Remove temporary _year field
-        projects.forEach(p => delete p._year);
+        projects.sort((a, b) => b.year - a.year);
 
         // Write to file
         fs.writeFileSync(outputFile, JSON.stringify(projects, null, 4));

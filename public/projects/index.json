@@ -3,6 +3,7 @@
         "slug": "NaturismoComputacional",
         "title": "Naturismo Computacional",
         "description": "Exploración de formas orgánicas y vida digital mediante algoritmos generativos.",
+        "year": 2026,
         "tags": [
             "Arte Algorítmico",
             "JavaScript",
@@ -15,6 +16,7 @@
         "slug": "AGest",
         "title": "AGEST-app",
         "description": "Una plataforma de gestión integral diseñada para la administración de asociaciones, AMPAs y ONGs.",
+        "year": 2025,
         "tags": [
             "app",
             "Finanzas",
@@ -27,6 +29,7 @@
         "slug": "Corcho",
         "title": "Corcho",
         "description": "Mi corcho digital, un gestor de tareas minimalista.",
+        "year": 2025,
         "tags": [
             "app",
             "gestión"
@@ -38,6 +41,7 @@
         "slug": "FinFer",
         "title": "Finanzas Fer-sonales",
         "description": "Controla todas tus cuentas e inversiones desde una misma app y gestiona de verdad tu patrimonio.",
+        "year": 2025,
         "tags": [
             "Finanzas",
             "Bolsa",
@@ -50,6 +54,7 @@
         "slug": "MacetasVerticales",
         "title": "Macetas Verticales",
         "description": "Diseño y fabricación de macetas modulares mediante SketchUp e impresión 3D con Centauri Carbon.",
+        "year": 2025,
         "tags": [
             "Diseño",
             "3D"
@@ -61,6 +66,7 @@
         "slug": "SaltaCacas",
         "title": "SaltaCacas Game",
         "description": "Mi primer juego web.",
+        "year": 2025,
         "tags": [
             "Juego",
             "app"
@@ -72,6 +78,7 @@
         "slug": "SumasEmparejadas",
         "title": "Libros - Pasatiempos",
         "description": "Colección de libros de pasatiempos que vendemos en Amazon.",
+        "year": 2024,
         "tags": [
             "Entretenimiento",
             "app"
@@ -83,17 +90,19 @@
         "slug": "MemoriasSoldado",
         "title": "Memorias de un soldado 1919-24",
         "description": "Edición y publicación de las memorias de mi abuelo. Un proyecto de recuperación histórica y producción editorial.",
+        "year": 2020,
         "tags": [
             "Libro",
             "Historia"
         ],
         "image": "img/memoriassoldado1.png",
-        "url": ""
+        "url": "https://amzn.eu/d/djYiQ4B"
     },
     {
         "slug": "enrdados",
         "title": "EnRdados Blog",
         "description": "un blog donde hablamos de R, tecnología y mucho más.",
+        "year": 2017,
         "tags": [
             "Blog",
             "Programación"

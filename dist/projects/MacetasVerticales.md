@@ -8,7 +8,7 @@ image: "img/macetasverticales.png"
 
 # Macetas Verticales
 
-Este proyecto combina el diseño industrial con la decoración funcional, permitiendo aprovechar el espacio vertical para el cultivo de plantas en interiores o balcones reducidos.
+Este proyecto combina el diseño industrial con la decoración funcional, permitiendo aprovechar el espacio vertical para el cultivo de plantas en interiores o balcones reducidos. es un proyecto qque hice para aprender del mundo 3D y aprovechar la impresora que me han regalado.
 
 ![Macetas Verticales impresas](img/macetasverticales.png)
 

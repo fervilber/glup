@@ -4,6 +4,7 @@ description: "Edición y publicación de las memorias de mi abuelo. Un proyecto 
 year: 2020
 tags: ["Libro", "Historia"]
 image: "img/memoriassoldado1.png"
+url: "https://amzn.eu/d/djYiQ4B"
 ---
 
 # Memorias de un soldado 1919-24

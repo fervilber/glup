@@ -9,7 +9,7 @@ url: "https://fervilber.github.io/GenArt/index.html"
 
 # Naturismo Computacional
 
-"Naturismo Computacional" es un manifiesto vivo sobre la belleza que emerge cuando las leyes matemáticas se encuentran con la aleatoriedad de la naturaleza. Este proyecto es una galería de arte generativo donde cada pieza se crea en tiempo real mediante algoritmos que simulan procesos biológicos.
+"Naturismo Computacional" es un manifiesto vivo sobre la belleza que emerge cuando las leyes matemáticas se encuentran con la aleatoriedad de la naturaleza. Este proyecto es una galería de arte generativo donde cada pieza se crea en tiempo real mediante algoritmos que simulan procesos biológicos. Lo he creado para aprender a programar con p5.js y para explorar la belleza de la naturaleza a través de la matemática y el caos.
 
 ![Naturismo Computacional](../img/naturismocomputacional.png)
 

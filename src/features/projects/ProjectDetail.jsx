@@ -109,16 +109,16 @@ const ProjectDetail = () => {
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
                                         <Calendar size={18} className="text-primary" />
-                                        <span className="text-sm font-medium">Año: {project.tags.find(t => !isNaN(t)) || '2026'}</span>
+                                        <span className="text-sm font-medium">Año: {project.year || 'N/A'}</span>
                                     </div>
 
                                     <div className="space-y-3">
                                         <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
                                             <Tag size={18} className="text-primary" />
-                                            <span className="text-sm font-medium">Tecnologías:</span>
+                                            <span className="text-sm font-medium">Etiquetas:</span>
                                         </div>
                                         <div className="flex flex-wrap gap-2">
-                                            {project.tags.filter(t => isNaN(t)).map(tag => (
+                                            {project.tags.map(tag => (
                                                 <Link
                                                     key={tag}
                                                     to={`/projects?tag=${tag}`}

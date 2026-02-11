@@ -9,9 +9,9 @@ url: "https://ampa-conservatorio-cieza.lovable.app"
 
 # AGest
 
-Una app totalmente web para la gestión de Asociaciones, AMPAS etc.. La idea es facilitar a los miembros de la Junta Directiva o aquellos que realmente se involucren en el trabajo diario de la asociación, a llevar las cuentas, los documentos, y listados de socios que nadie quiere responsabilizarse.
+Una app web para la gestión de Asociaciones, AMPAS etc.. La idea es facilitar a los miembros de la Junta Directiva o aquellos que realmente se involucren en el trabajo diario de la asociación, a llevar las cuentas, los documentos, y listados de socios que nadie quiere responsabilizarse.
 
-Ha quedado un programa bastante interesante.
+Ha quedado un programa bastante interesante y que facilita la gestión de las asociaciones.
 
 ![AsoGest](img/ASOCIAGEST01.png)
 

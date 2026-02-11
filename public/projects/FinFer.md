@@ -9,19 +9,21 @@ url: "https://finfer.lovable.app/"
 
 # FinFer
 
-FinFer (Finanzas Fer-sonales) es una completa app de gestión de tus inversiones pensada para aquellos que no solo invierten en Bolsa. Está pensada para los que diversifican su cartera en multiples activos y no encontraban una aplicación desde la que revisar toda su cartera de un solo vistazo.
+FinFer (Finanzas Fer-sonales) es una completa app de gestión de tus inversiones pensada para aquellos que no solo invierten en Bolsa. Está pensada para los que diversifican su cartera en multiples activos y no encontraban una aplicación desde la que revisar y hacer el seguimiento de toda su cartera de un solo vistazo.
 
-FinFer surgió de la necesidad de seguimiento de mis inversiones en Bolsa, Prestamos P2P y criptomonedas. El resultado es una app que permite gestionar todas tus inversiones en un solo lugar y ver tus ganancias mensuales como un segundo sueldo.
+**FinFer** surgió de la necesidad de seguimiento de mis inversiones en Bolsa, Prestamos P2P, inmobiliarias y criptomonedas. El resultado es una app que permite gestionar todas estas cosas en un solo lugar y ver tus ganancias mensuales. Parece mentira pero el ver esas ganancias mensuales por dividendos juntas y sumadas te hace pareciar la inversión y ver como tienes un sueldo que solo depende de tí.
 
 ![imagen app](img/finfer_analisis3.png)
 
 ## Características
 
-El programa lo hice para seguimiento de mis propias inversiones, que están repartidas en muchos activos, webs y aplicaciones diferentes. Hasta ahora no he encontrado un programa que me permitiera gestionar todas mis inversiones en un solo lugar, y calcular los retornos mensuales y anuales de todas mis inversiones. Con esta aplicacion conseguí juntar y sumar los pequños retornos que por ejemplo me dan algunas de las aplicaciones de préstamos P2P y gracias a los cálculos internos he podido darme cuenta de lo importante que son estas inversiones para mi cuenta corriente.
+El programa lo hice para sseguir inversiones variopintas, es decir, que están repartidas en muchos activos, webs y aplicaciones diferentes. Hasta ahora no he encontrado un programa que me permitiera gestionar todas estas cosas en un solo lugar, y calcular los retornos mensuales y anuales globales.
 
-Si lo ves, lo cuidas más, y tratas de cuidarte, así que práctica el mejor deporte del mundo, la inversión con esta aplicación sencilla que simplemente te dará la visión global de tu cartera, la evolución con el tiempo y tus ganancias mensuales como un segundo sueldo.
+Con esta aplicación conseguí juntar y sumar los pequños retornos que, por ejemplo, me dan algunas de web de préstamos P2P y gracias a los cálculos internos he podido darme cuenta de lo importante que son estas pequeñas inversiones para mi cuenta corriente.
 
-Las funciones que podrás encontrar en FinFer son:
+Si lo ves, lo cuidas más, y tratas de dedicar más recursos y tiempo, así que práctica el mejor deporte del mundo, la inversión con esta aplicación sencilla que te dará la visión global de tu cartera, la evolución con el tiempo y tus ganancias mensuales como segundo sueldo.
+
+Las funciones que podrás encontrar en **FinFer** son:
 
 - **Gestión compras, ventas y dividendos**: Añadir, editar y eliminar productos, registros, plataformas y activos a la cartera.
 - **Gráficos**: Visualización de multiples gráficas de seguimiento y rentabilidad de las inversiones.

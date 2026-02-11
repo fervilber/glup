@@ -9,7 +9,7 @@ url: "https://corcho.lovable.app/"
 
 # Corcho
 
-Una aplicación de tareas minimalista que utiliza una estética de diseño muy actual conocida como **"Bento Grid"**, que organiza la información en bloques visualmente independientes pero armoniosos.
+Una aplicación de tareas minimalista que utiliza una estética de diseño muy actual conocida como **"Bento Grid"**, para organiza la información en bloques visualmente independientes pero armoniosos.
 Organiza, apunta, cita y comparte (si quieres) tus notas en una página web.
 
 ![Corcho](img/corcho01.png)

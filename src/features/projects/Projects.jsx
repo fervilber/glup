@@ -58,10 +58,7 @@ const Projects = () => {
                 )}
             </div>
 
-            <motion.div
-                layout
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-24"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-24">
                 {filteredProjects.map((project, index) => (
                     <ProjectCard
                         key={project.slug}
@@ -69,7 +66,7 @@ const Projects = () => {
                         index={index}
                     />
                 ))}
-            </motion.div>
+            </div>
         </Container>
     );
 };
