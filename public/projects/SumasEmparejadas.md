@@ -19,7 +19,7 @@ Seguro que te enganchan !!!.
 
 ## Sobre el Proyecto
 
-Este proyecto nació de la idea de hacer un pasatiempo diferente a la sopa de letras clásica, y como yo soy mas de mates que de letras, pues se me ocurió este juego simple de sumas emparejadas.
+Este proyecto nació de la idea de hacer un pasatiempo diferente a la sopa de letras clásica, y como yo soy más de mates que de lengua, pues se me ocurrió este juego simple de **sumas emparejadas**.
 
 El desarrollo inicial lo hice en R, mi lenguaje de programación preferido y que me permitió tener un boceto inicial de tablero y los primeros juegos.
 

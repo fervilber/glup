@@ -13,6 +13,32 @@
         "url": "https://fervilber.github.io/GenArt/index.html"
     },
     {
+        "slug": "SimuladorHipotecario",
+        "title": "Simulador Hipotecario",
+        "description": "Aplicación web que permite simular y comparar la rentabilidad entre la compra y el alquiler de viviendas.",
+        "year": 2026,
+        "tags": [
+            "app",
+            "Finanzas",
+            "Calculadora"
+        ],
+        "image": "img/simuladorhipotecario.png",
+        "url": "https://hipocalc-69750.web.app/"
+    },
+    {
+        "slug": "TomaData",
+        "title": "TomaData",
+        "description": "Aplicación móvil para la toma de datos de campo y auscultación de presas en tiempo real.",
+        "year": 2026,
+        "tags": [
+            "app",
+            "Ingeniería",
+            "Móvil"
+        ],
+        "image": "img/tomadata.png",
+        "url": "https://tomadata-backend-2026xr.web.app/"
+    },
+    {
         "slug": "AGest",
         "title": "AGEST-app",
         "description": "Una plataforma de gestión integral diseñada para la administración de asociaciones, AMPAs y ONGs.",
