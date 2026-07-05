@@ -80,6 +80,20 @@
         "url": "https://tomadata-backend-2026xr.web.app/"
     },
     {
+        "slug": "Zincron",
+        "title": "Zincron",
+        "description": "Plataforma científica para el análisis fractal y detección de ciclos en series temporales financieras.",
+        "year": 2026,
+        "tags": [
+            "Ciencia de Datos",
+            "Finanzas",
+            "Python",
+            "React"
+        ],
+        "image": "img/zincron.png",
+        "url": "https://zincron.lovable.app/"
+    },
+    {
         "slug": "AGest",
         "title": "AGEST-app",
         "description": "Una plataforma de gestión integral diseñada para la administración de asociaciones, AMPAs y ONGs.",
