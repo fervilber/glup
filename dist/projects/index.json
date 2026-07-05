@@ -1,5 +1,46 @@
 [
     {
+        "slug": "CalculadoraAscensor",
+        "title": "Calculadora de Ascensor",
+        "description": "Herramienta técnica para el cálculo justo de cuotas de incorporación a ascensores comunitarios según la LPH.",
+        "year": 2026,
+        "tags": [
+            "App",
+            "Finanzas",
+            "Programación"
+        ],
+        "image": "img/calculadora_ascensor.png",
+        "url": "https://fervilber.github.io/calculo_ascensor_comunidad/"
+    },
+    {
+        "slug": "DigitalmenWeb",
+        "title": "Digitalmen Web",
+        "description": "Publicación automatizada del Segundo Cerebro de tecnología e IA a la web pública usando Quartz 5 y GitHub Actions.",
+        "year": 2026,
+        "tags": [
+            "Quartz",
+            "Obsidian",
+            "IA",
+            "GitHub Actions"
+        ],
+        "image": "img/digitalmen_web.png",
+        "url": "https://fervilber.github.io/digitalmen-web/"
+    },
+    {
+        "slug": "LLMWiki",
+        "title": "LLM Wiki",
+        "description": "Un sistema de Segundo Cerebro digital mantenido por agentes de IA para la gestión avanzada del conocimiento.",
+        "year": 2026,
+        "tags": [
+            "IA",
+            "Python",
+            "Obsidian",
+            "Programación"
+        ],
+        "image": "img/llm_wiki.png",
+        "url": "https://github.com/fervilber/llm-wiki"
+    },
+    {
         "slug": "NaturismoComputacional",
         "title": "Naturismo Computacional",
         "description": "Exploración de formas orgánicas y vida digital mediante algoritmos generativos.",

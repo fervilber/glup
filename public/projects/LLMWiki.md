@@ -1,3 +1,12 @@
+---
+title: "LLM Wiki"
+description: "Un sistema de Segundo Cerebro digital mantenido por agentes de IA para la gestión avanzada del conocimiento."
+year: 2026
+tags: ["IA", "Python", "Obsidian", "Programación"]
+image: "img/llm_wiki.png"
+url: "https://github.com/fervilber/llm-wiki"
+---
+
 # LLM Wiki — Segundo Cerebro Inteligente
 
 **LLM Wiki** es un sistema de gestión del conocimiento personal (PKB) diseñado para ser mantenido y enriquecido de forma autónoma por un agente de inteligencia artificial. A diferencia de las bases de datos convencionales, este sistema organiza la información en un grafo de notas interconectadas que "crece" con el tiempo.

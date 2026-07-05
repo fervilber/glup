@@ -1,3 +1,12 @@
+---
+title: "Calculadora de Ascensor"
+description: "Herramienta técnica para el cálculo justo de cuotas de incorporación a ascensores comunitarios según la LPH."
+year: 2026
+tags: ["App", "Finanzas", "Programación"]
+image: "img/calculadora_ascensor.png"
+url: "https://fervilber.github.io/calculo_ascensor_comunidad/"
+---
+
 # Calculadora de Incorporación al Ascensor
 
 Esta herramienta interactiva ha sido diseñada para facilitar el cálculo justo y transparente de la cuota que debe abonar un nuevo vecino al incorporarse a una comunidad de ascensor ya existente.
