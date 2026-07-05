@@ -54,6 +54,20 @@
         "url": "https://fervilber.github.io/GenArt/index.html"
     },
     {
+        "slug": "NominasHogar",
+        "title": "Nóminas Hogar",
+        "description": "Calculadora y generador simplificado de nóminas en PDF para empleadas del hogar según la normativa vigente.",
+        "year": 2026,
+        "tags": [
+            "App",
+            "Finanzas",
+            "Calculadora",
+            "React"
+        ],
+        "image": "img/nominashogar.png",
+        "url": "https://fervilber.github.io/nominas-hogar/"
+    },
+    {
         "slug": "SimuladorHipotecario",
         "title": "Simulador Hipotecario",
         "description": "Aplicación web que permite simular y comparar la rentabilidad entre la compra y el alquiler de viviendas.",
